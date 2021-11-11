@@ -1,3 +1,25 @@
+$(function() {
+    $(".menu").on("click", "a", function(event) {
+
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+
+        var id = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+
+        //анимируем переход на расстояние - top за 1500 мс
+
+        $('body,html').animate({ scrollTop: top }, 1500);
+    });
+
+
+});
+
 var menu = ['R 13-15', 'R16', 'R17', 'R18', 'R19', 'R20', 'R21-22']
 var mySwiper = new Swiper('.swiper-container', {
 
@@ -20,13 +42,30 @@ var mySwiper = new Swiper('.swiper-container', {
     // },
 });
 
+
 const swiper = new Swiper('.swiper2', {
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-  });
+});
 
+
+
+
+
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 100) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
+    }
+});
+
+$('.menu__btn').on('click', function() {
+    $('.menu__list').toggleClass('menu__list--active');
+});
 
 
 
