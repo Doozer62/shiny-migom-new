@@ -63,16 +63,14 @@ a {
 
 body {
     font-size: 18px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     font-family: 'Manrope', sans-serif;
     color: #17181C;
     background-color: #F7F4F4;
 }
 
 .header-background {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    background-image: url(../img/bg.png);
 }
 
 .container {
@@ -87,8 +85,30 @@ body {
     justify-content: space-between;
 }
 
+.header-top__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-top {
+position: fixed;
+
+    top: 0;
+    z-index: 10;
+    transition: all 0.5s;
+}
+
+.header__top.show {
+    background-color: #859ee9;
+}
+
 .logo {
     padding-top: 16px;
+    /* padding-right: 20px; */
+}
+
+.menu {
+    padding: 0 60px;
 }
 
 .menu__list {
@@ -98,7 +118,7 @@ body {
 }
 
 .menu__list-item {
-    padding-left: 25px;
+    padding-left: 23px;
 }
 
 .menu__list-link {
@@ -108,7 +128,7 @@ body {
 
 .menu__list-link:hover {
     /* transform: scale(1.2); */
-    font-size: 24px;
+    /* font-size: 24px; */
 }
 
 .phone-call {
@@ -139,6 +159,7 @@ body {
 }
 
 .header-title {
+    margin-top: 81px;
     font-weight: 800;
     font-size: 64px;
     line-height: 80px;
@@ -1025,3 +1046,39 @@ body {
     color: #fff;
     margin-top: 11px;
 }
+
+@media (max-width: 1200px) {
+    .callback__btn {
+        margin-right: 12px;
+    }
+    .logo {
+        margin-left: 15px;
+    }
+    .header-title {
+        margin-left: 15px;
+        font-size: 54px;
+        line-height: 60px;
+    }
+    .header-content {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo {
+        width: 134px;
+        height: 66px;
+    }
+    .header-title {
+        font-size: 50px;
+    }
+    .header-content {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
