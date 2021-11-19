@@ -9,7 +9,19 @@ $(function() {
 
 
         $('body,html').animate({ scrollTop: top }, 1500);
+
+
+        
     });
+
+    var btn = $('.header__top, .header__top-inner');
+
+
+    $('.menu__btn').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active');
+    });
+
+
 
 
 });
@@ -48,17 +60,37 @@ const swiper = new Swiper('.swiper2', {
 
 
 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 100) {
-        btn.addClass('show');
-    } else {
-        btn.removeClass('show');
-    }
-});
+    
+
 
 $('.menu__btn').on('click', function() {
     $('.menu__list').toggleClass('menu__list--active');
 });
+
+
+$(function() {
+
+
+    var btn = $('.header, .header__top');
+
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 100) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    $('.menu__btn').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active');
+    });
+
+});
+
+
+
+
 
 
 

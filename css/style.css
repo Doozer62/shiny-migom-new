@@ -78,28 +78,42 @@ body {
     margin: 0 auto;
 }
 
-.header-top,
 .footer-top {
     color: #fff;
     display: flex;
     justify-content: space-between;
 }
 
-.header-top__inner {
-    display: flex;
-    justify-content: space-between;
+.header {
+    color: #fff;
 }
 
-.header-top {
-position: fixed;
-
+.header__top {
+    transition: all 0.5s;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     transition: all 0.5s;
 }
 
-.header__top.show {
-    background-color: #859ee9;
+.header__top-inner {
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.header .show {
+    z-index: 200;
+    padding-bottom: 20px;
+    background-color: rgba(18, 18, 19, 0.767);
+}
+
+.header__top-inner .show {
+    margin-top: -63px;
+    padding-bottom: 22px;
 }
 
 .logo {
@@ -109,6 +123,14 @@ position: fixed;
 
 .menu {
     padding: 0 60px;
+}
+
+.menu__btn {
+    display: none;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
 }
 
 .menu__list {
@@ -1051,14 +1073,17 @@ position: fixed;
     .callback__btn {
         margin-right: 12px;
     }
+
     .logo {
         margin-left: 15px;
     }
+
     .header-title {
         margin-left: 15px;
         font-size: 54px;
         line-height: 60px;
     }
+
     .header-content {
         font-size: 16px;
         margin-left: 15px;
@@ -1070,9 +1095,62 @@ position: fixed;
         width: 134px;
         height: 66px;
     }
+
+    .header__top-inner.show {
+        display: flex;
+        margin-top: 0;
+        padding-bottom: 10px;
+        background: none;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu__list {
+        display: block;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -40px;
+        align-items: center;
+        background-color: #4f4f50dc;
+        transform: translateY(-200%);
+        transition: all 0.5s;
+        z-index: 1;
+        padding: 160px 0 15px;
+        overflow: scroll;
+    }
+
+    .menu__list.menu__list--active {
+        transform: translateY(0);
+        height: 100vh;
+        transition: all 0.5s;
+    }
+
+    .menu__btn {
+        display: block;
+        margin-top: 40px;
+    }
+
+    .menu__list-item+.menu__list-item {
+        margin-left: 0;
+    }
+
+    .menu__list-link {
+        position: relative;
+        display: block;
+        padding: 4px 0;
+        line-height: 48px;
+    }
+
     .header-title {
         font-size: 50px;
     }
+
     .header-content {
         font-size: 14px;
         line-height: 22px;

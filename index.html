@@ -11,6 +11,7 @@
 
     <!-- <link rel="stylesheet" href="css/jQueryUI.css">
     <link rel="stylesheet" href="css/nouislider.css"> -->
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,12 +23,23 @@
     <section class="header">
         
         <div class="header-background">
-            <div class="container"> 
-                <div class="header-top">
+            <div class="header__top">
+            <div class="container">          
                               
-                                  <div class="header-top__inner">
+                                  <div class="header__top-inner">
                     <img src="img/logo.png" alt="" class="logo">
+
                     <nav class="menu">
+
+                        <button type="button" class="menu__btn">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                              <path d="M0 0H30V2H0V0Z" fill="#4CAF50"></path>
+                              <path d="M0 8H30V10H0V8Z" fill="#4CAF50"></path>
+                              <rect y="16" width="30" height="2" fill="#4CAF50"></rect>
+                            </svg>
+                    </button>
+
                         <ul class="menu__list">
                             <li class="menu__list-item">
                                 <a class="menu__list-link" href="#works">Услуги</a>
@@ -48,21 +60,25 @@
                         <button class="callback__btn">Заказать звонок</button>
                     </span>
                 </div>
-                </div> 
-                
+            </div>
+            </div>
             
+            
+            <div class="container">
                 <div class="header-bottom">
                     <h1 class="header-title">Мобильный
                         <span class="title-two">шиномонтаж №1</span></h1>
                 </div>
+            
+
                 <span class="header-content">
                     В интернет-магазине шин Шины Мигом вы можете купить шины известных брендов. Подбор осуществляется
                     как по типоразмеру, так и по марке авто
                 </span>
 
                 <a href="tel:88005551326" class="header-call">Вызвать шиномонтаж</a>
-            </div>
-        
+            </div> 
+            
             <div class="mobile-repair">
                 <div class="container">
                     <div class="mobile-repair__inner">
@@ -103,6 +119,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
     </section>
 
@@ -770,6 +787,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/swiper-bundle.js"></script>
     <script src="js/script.js"></script>
 
