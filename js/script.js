@@ -1,10 +1,11 @@
 $(function() {
+
+
+
     $(".menu").on("click", "a", function(event) {
 
         event.preventDefault();
-
         var id = $(this).attr('href'),
-
             top = $(id).offset().top;
 
 
@@ -17,8 +18,9 @@ $(function() {
     var btn = $('.header__top, .header__top-inner');
 
 
-    $('.menu__btn').on('click', function() {
+    $('.menu__btn, .menu a').on('click', function() {
         $('.menu__list').toggleClass('menu__list--active');
+        $('.header__top').toggleClass('header__top--active');
     });
 
 
