@@ -1,18 +1,15 @@
 $(function() {
 
 
-
     $(".menu").on("click", "a", function(event) {
 
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;
 
-
         $('body,html').animate({ scrollTop: top }, 1500);
 
-
-        
+     
     });
 
     var btn = $('.header__top, .header__top-inner');
@@ -24,15 +21,16 @@ $(function() {
     });
 
 
-
 });
 
 
 
 var menu = ['R 13-15', 'R16', 'R17', 'R18', 'R19', 'R20', 'R21-22']
 var mySwiper = new Swiper('.swiper-container', {
-
+    
+    effect: 'fade',
     scrollbar: {
+        direction: 'vertical',
         el: '.swiper-scrollbar',
     },
     // If we need pagination
@@ -42,6 +40,7 @@ var mySwiper = new Swiper('.swiper-container', {
         renderBullet: function(index, className) {
             return '<span class="' + className + '">' + (menu[index]) + '</span>';
         },
+
     },
 
     // Navigation arrows
@@ -77,6 +76,7 @@ $(function() {
 
 
 });
+
 
 
 
