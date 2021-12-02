@@ -104,7 +104,7 @@ body {
 
 .header .show {
     width: 100vw;
-    z-index: 200;
+    z-index: 106;
     padding-bottom: 20px;
     background-color: rgba(18, 18, 19, 0.767);
 }
@@ -1067,6 +1067,118 @@ body {
     margin-top: 11px;
 }
 
+
+
+
+.modal-service-form {
+    display: inline-block;
+}
+
+.modal__title {
+    font-size: 20px;
+    color: #fff;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.modal__your-phone {
+    display: inline-block;
+    padding-right: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-right: 125px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.modal__application {
+    background-color: #FFD200;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+#parent_popup {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+
+  #popup { 
+    background-color: rgba(0, 0, 0, 0.8);
+      width: 520px;
+      margin: 15% auto;
+      padding: 5px 20px 13px 20px;
+      position: relative;
+      /*--CSS3 CSS3 Тени для Блока--*/
+      -webkit-box-shadow: 0px 0px 20px #000;
+      -moz-box-shadow: 0px 0px 20px #000;
+      box-shadow: 0px 0px 20px #000;
+      /*--CSS3 Закругленные углы--*/
+      border-radius: 10px;
+  }
+  /* кнопка закрытия */
+  .close {
+      line-height: 24px;
+      position: absolute;
+      right: -65px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 20px;
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+      top: -24px;
+  }
+  .close:hover {
+      background-color: rgba(0, 122, 200, 0.8);
+  }
+
+  .modal__label {
+      display: flex;
+      justify-content: center;
+  }
+
+  .modal__inner {
+      text-align: center;
+  }
+
+  
+
+  @-moz-keyframes popup {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+
+
 @media (max-width: 1200px) {
     .callback__btn {
         margin-right: 12px;
@@ -1390,14 +1502,12 @@ body {
         .reviews-top {
             flex-direction: column;
             align-items: center;
-
         }
 
         .reviews-bottom {
             flex-direction: column;
             align-items: center;
         }
-
 
         .video-content__inner {
             padding: 10px;
@@ -1568,6 +1678,29 @@ body {
         .reviews__title {
             font-size: 40px;
             line-height: 45px;
+        }
+
+        .swiper-bottom{
+
+        }
+
+        .swiper2 {
+            column-count: 2;
+            flex-direction: column;
+        }
+
+        .partners__list {
+            column-count: 2;
+            flex-direction: column;
+        }
+
+        .partners__list-top {
+            margin-left: 5px;
+        }    
+        
+        .partners__list-bottom {
+            margin-top: 40px;
+            margin-right: 5px;
         }
     }
 
