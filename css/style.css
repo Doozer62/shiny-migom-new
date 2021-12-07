@@ -116,6 +116,7 @@ body {
 
 .menu {
     padding: 0;
+    transition: all 0.5s;
 }
 
 .menu__btn {
@@ -132,22 +133,43 @@ body {
     padding-top: 16px;
     color: rgba(255, 255, 255, 0.8);
 }
-
+.mrnu__footer-item,
 .menu__list-item {
     display: flex;
     align-items: center;
     padding-top: 10px;
 }
-
-.menu__list-link {
-    transition: 0.5s;
-    /* Время эффекта */
+.menu__footer-item a,
+.menu__list-item a {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer;
+}
+.menu__footer-item a::after,
+.menu__list-item a::after {
+    background-color: #FFD200;
+    display: block;
+    content: "";
+    height: 2px; 
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.menu__footer-item a:hover::after,
+.menu__footer-item a:focus::after,
+.menu__list-item a:hover::after,
+.menu__list-item a:focus::after {
+    width: 100%;
 }
 
-.menu__list-link:hover {
-    /* transform: scale(1.2); */
-    /* font-size: 24px; */
-}
+
+/* .menu__list-link a:hover,
+:focus,
+:active {
+    text-shadow: #FC0 1px 0 10px;
+} */
 
 .phone-num {
     margin-right: 12px;
@@ -168,6 +190,10 @@ body {
     padding: 18px 25px;
     background-color: #5BBFC8;
     border-radius: 5px;
+}
+
+.callback__btn:hover {
+    color: #3498db;
 }
 
 .header-bottom {
@@ -967,21 +993,32 @@ body {
     background-color: #17181C;
 }
 
-.footer-img {
-    position: absolute;
-    margin-top: -214px;
-    margin-left: 478px;
+.footer-list__mobile {
+    display: none;
 }
 
-.footer-top {
-    color: #fff;
-    display: flex;
+.footer-img__mobile {
+    display: none;
+}
+
+.footer__bottom-mobile {
+    display: none;
+}
+
+.border-footer__mobile {
+    display: none;
+}
+
+.footer-img {
+    position: sticky;
+    margin-top: -214px;
+    left: 478px;
 }
 
 .footer__list {
     color: #fff;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -1066,9 +1103,6 @@ body {
     color: #fff;
     margin-top: 11px;
 }
-
-
-
 
 .modal-service-form {
     display: inline-block;
@@ -1164,39 +1198,6 @@ body {
 
 
 
-@-moz-keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-
-
-
 @media (max-width: 1200px) {
     .callback__btn {
         margin-right: 12px;
@@ -1260,8 +1261,19 @@ body {
         left: 55px;
     }
 
+    .reviews-bottom,
+    .reviews-top {
+        justify-content: space-evenly;
+    }
+
     .video-inner {
         margin: 0 5px;
+        width: 431px;
+        height: 233px;
+    }
+
+    .footer-whatsapp {
+        margin-right: 6px;
     }
 
 }
@@ -1273,9 +1285,8 @@ body {
     }
 
     .logo {
-        position: absolute;
-        left: 0;
-        top: 74px;
+        position: relative;
+        margin-left: -46px;
         width: 134px;
         height: 66px;
     }
@@ -1344,7 +1355,7 @@ body {
     .menu__list-link {
         position: relative;
         display: block;
-        padding: 4px 0;
+        padding: 12px 0;
         line-height: 48px;
     }
 
@@ -1527,8 +1538,65 @@ body {
         align-items: center;
     }
 
+    .video-inner {
+        width: 331px;
+        height: 233px;
+    }
+
     .video-content__inner {
         padding: 10px;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .footer-img {
+        display: block;
+        margin-top: -122px;
+    }
+
+    .footer__mobile {
+        display: block;
+    }
+
+    .footer__bottom-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 68px;
+        margin-left: 115px;
+    }
+
+    .footer-list__mobile {
+        text-align: center;
+        display: block;
+    }
+
+    .footer__phone-num {
+        margin-left: 0;
+    }
+
+    .menu__footer-item {
+        color: #fff;
+    }
+
+    .footer-item-whatsapp {
+        margin-top: 26px;
+        color: #FFD200;
+    }
+
+    .footer-menu {
+        margin-top: 57px;
+        margin-left: 32px;
+    }
+
+    .menu__footer-num-mobile {
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    .border-footer__mobile {
+        display: block;
     }
 
 }
@@ -1800,10 +1868,6 @@ body {
         height: 139px;
     }
 
-    .swiper2 {
-        
-    }
-
     .swiper-arrows {
         margin-right: 50px;
     }
@@ -1816,11 +1880,16 @@ body {
         right: 10px;
         top: -35px;
     }
+
+    .footer-img {
+        margin-top: -100px;
+    }
 }
 
 @media (max-width: 405px) {
     .partners__list {
         margin-left: -5vw;
+        margin-right: 5px;
     }
 
     .close {
