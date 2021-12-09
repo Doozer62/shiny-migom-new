@@ -133,30 +133,35 @@ body {
     padding-top: 16px;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .mrnu__footer-item,
 .menu__list-item {
     display: flex;
     align-items: center;
     padding-top: 10px;
 }
+
 .menu__footer-item a,
 .menu__list-item a {
     display: inline-block;
     line-height: 1;
-    text-decoration: none; /* Убираем подчеркивание */
+    text-decoration: none;
+    /* Убираем подчеркивание */
     cursor: pointer;
 }
+
 .menu__footer-item a::after,
 .menu__list-item a::after {
     background-color: #FFD200;
     display: block;
     content: "";
-    height: 2px; 
+    height: 2px;
     width: 0%;
     -webkit-transition: width .3s ease-in-out;
     -moz--transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
 }
+
 .menu__footer-item a:hover::after,
 .menu__footer-item a:focus::after,
 .menu__list-item a:hover::after,
@@ -190,10 +195,11 @@ body {
     padding: 18px 25px;
     background-color: #5BBFC8;
     border-radius: 5px;
+    transition: all 0.5s;
 }
 
 .callback__btn:hover {
-    color: #3498db;
+    background-color: #3b9199;
 }
 
 .header-bottom {
@@ -233,6 +239,11 @@ body {
     color: #000;
     margin-top: 41px;
     font-weight: bold;
+    transition: all 0.5s;
+}
+
+.header-call:hover {
+    background-color: #cea800;
 }
 
 .header-call::before {
@@ -513,6 +524,11 @@ body {
     display: block;
     max-width: 255px;
     margin-left: 42px;
+    transition: all 0.5s;
+}
+
+.application:hover {
+    background-color: #cea800;
 }
 
 .advantages {
@@ -668,6 +684,11 @@ body {
     display: block;
     max-width: 255px;
     margin-left: 42px;
+    transition: all 0.5s;
+}
+
+.mobile-service__application:hover {
+    background-color: #666a7a;
 }
 
 .additional-works {
@@ -974,6 +995,7 @@ body {
     width: 32px;
     height: 32px;
     margin-top: 12px;
+    transition: all 0.5s;
 }
 
 .swiper-button-next {
@@ -985,6 +1007,13 @@ body {
     height: 32px;
     margin-top: 12px;
     margin-left: 5px;
+    transition: all 0.5s;
+}
+
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color:  rgb(219, 219, 219);
 }
 
 .footer {
@@ -1033,7 +1062,13 @@ body {
     font-size: 18px;
     line-height: 25px;
     margin-left: 126px;
+    transition: all 0.5s;
 }
+
+.footer__phone-num:hover {
+    color: #cea800;
+}
+
 
 .footer__phone-num::before {
     content: '';
@@ -1128,6 +1163,11 @@ body {
     background-color: #FFD200;
     margin-top: 20px;
     margin-bottom: 50px;
+    transition: all 0.5s;
+}
+
+.modal__application:hover {
+    background-color: #cea800;
 }
 
 
@@ -1799,7 +1839,9 @@ body {
         width: 55px;
         height: 55px;
     }
-    .swiper-button-next:after, .swiper-button-prev:after {
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
         font-size: 27px;
     }
 
@@ -1854,8 +1896,7 @@ body {
 
     .slider-title,
     .reviews__title,
-    .partners__title
-     {
+    .partners__title {
         font-size: 30px;
     }
 
